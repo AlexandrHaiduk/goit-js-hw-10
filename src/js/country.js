@@ -1,6 +1,5 @@
 import Notiflix from 'notiflix';
 import { debounce } from "lodash";
-
 import { fetchCountries } from "./fetchCountries";
 
 const inputEl = document.querySelector('input#search-box')
@@ -35,7 +34,6 @@ inputEl.addEventListener('input', debounce((e) => {
 
 }, 300))
 
-
 function renderCountires(data) {
     const markup = data.map(({flags, name}) => {
      return `<li>
@@ -51,7 +49,6 @@ function renderCountires(data) {
     }).join(''); 
 
  return countryListEl.innerHTML = markup;
- 
 }
 
 function renderOneCountry(data) {
